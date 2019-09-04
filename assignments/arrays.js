@@ -98,29 +98,23 @@ console.log(
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
-let carModels = inventory.map(function(model) {
-  return model.car_model;
-});
+let carModels = inventory.map(model => model.car_model);
 let carModelsSorted = carModels.sort();
 console.log(carModelsSorted);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = inventory.map(function(year) {
-  return year.car_year;
-});
+let carYears = inventory.map(year => year.car_year);
 console.log(carYears);
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
-let oldCars = carYears.filter(function(value) {
-  return value < 2000;
-});
+let oldCars = carYears.filter(value => value < 2000);
 console.log(oldCars.length);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
-let BMWAndAudi = inventory.filter(function(value) {
-  return value.car_make == 'BMW' || value.car_make == 'Audi';
-});
+let BMWAndAudi = inventory.filter(
+  value => value.car_make == 'BMW' || value.car_make == 'Audi'
+);
 console.log(JSON.stringify(BMWAndAudi));
